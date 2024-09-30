@@ -17,14 +17,12 @@ function App() {
 
       setEnrichedUrls(enrichUrlData(processedRetrievedUrlItems, processedEnrichmentData));
     }
-
     getEnrichedUrls();
-  }, [enrichedUrls]);
+  });
 
   return (
     <div className="App">
       {enrichedUrls && enrichedUrls.length > 0 && enrichedUrls.map((enrichedUrl) => <UrlItem enrichedUrl={enrichedUrl} />)} 
-      {/* {enrichedUrls && enrichedUrls.length > 0 && enrichedUrls.map((enrichedUrl) => <p>{enrichedUrl.retrievedUrl}</p>)}  */}
     </div>
   );
 }
