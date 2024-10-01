@@ -1,0 +1,51 @@
+/* Card styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #fff;
+    max-width: 400px;
+}
+
+/* Content inside the card */
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the h1 (underline) */
+h1 {
+    font-size: 1.0em;
+    text-decoration: underline; /* This underlines the <h1> */
+    color: #834b72;
+}
+
+/* Styling for the first URL - smaller text */
+.url-title {
+    font-size: 0.85em; /* Smaller text for the first URL */
+    color: #d475b8;
+    word-wrap: break-word;
+    margin-bottom: 8px;
+}
+
+/* Make the enrichment URL clickable */
+a {
+    color: #d475b8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Standard paragraph and text styles */
+p {
+    margin: 4px 0;
+    color: #555;
+}
+
+p strong {
+    color: #333;
+}
