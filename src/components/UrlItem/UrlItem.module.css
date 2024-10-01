@@ -7,8 +7,8 @@
     background-color: #f1e7f7;
     width: 90%;
     max-width: 350px;
-    
 }
+
 .cardContent {
     display: flex;
     flex-direction: column;
