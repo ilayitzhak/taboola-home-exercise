@@ -1,16 +1,10 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .App-header {
@@ -35,4 +29,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.country-group {
+  margin-bottom: 30px;
+  border: 0.5px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 60%;
+}
+
+.country-title {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  text-align: center;
 }

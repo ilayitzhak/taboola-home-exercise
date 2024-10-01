@@ -16,12 +16,16 @@ const UrlItem = ({ enrichedUrl }) => {
                     </a>
                 </p>
 
-                <p><strong>Name:</strong> {enrichmentData.name}</p>
-                <p><strong>Estimated Employees:</strong> {enrichmentData.est_emp}</p>
-                <p><strong>Industry:</strong> {enrichmentData.industry}</p>
-                <p><strong>Annual Revenue:</strong> {enrichmentData.annual_rev}</p>
-                <p><strong>Country:</strong> {enrichmentData.country}</p>
-                <h2 className="url-title small-text"><strong><u>Retrieve URL:</u></strong> {retrievedUrl.href}</h2>
+                {enrichmentData.name && <p><strong>Name:</strong> {enrichmentData.name}</p>}
+                {enrichmentData.est_emp && <p><strong>Estimated Employees:</strong> {enrichmentData.est_emp}</p>}
+                {enrichmentData.industry && <p><strong>Industry:</strong> {enrichmentData.industry}</p>}
+                {enrichmentData.annual_rev  && <p><strong>Annual Revenue:</strong> {enrichmentData.annual_rev}</p>}
+                {enrichmentData.country && <p><strong>Country:</strong> {enrichmentData.country}</p>}
+                {retrievedUrl.href && (
+                    <h2 className="url-title small-text">
+                        <strong><u>Retrieved URL:</u></strong> {retrievedUrl.href}
+                    </h2>
+                )}
             </div>
         </div>
     );
