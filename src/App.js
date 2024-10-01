@@ -20,7 +20,7 @@ function App() {
       const enrichedUrls = enrichUrlData(processedRetrievedUrlItems, processedEnrichmentData);
       
       const grouped = enrichedUrls.reduce((acc, enrichedUrl) => {
-        const country = enrichedUrl.enrichmentData.country || ' ';
+        const country = enrichedUrl.enrichmentData.country;
         if (!acc[country]) acc[country] = [];
         acc[country].push(enrichedUrl);
         return acc;
@@ -46,7 +46,8 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <h1 className={styles.instruction}>Hello! To See the Data Enrichment URLs for Each Country, Select the Desired Country</h1>
+      <h1 className={styles.welcomeMessage}>Hello!</h1>
+      <h1 className={styles.instruction}>To see the data enriched URLs for each country, select the desired country:</h1>
       <nav>
         <ul>
             <select value={selectedCountry} onChange={handleCountryChange}>

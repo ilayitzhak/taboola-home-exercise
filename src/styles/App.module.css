@@ -21,8 +21,15 @@
 .instruction {
   text-align: center;
   font-size: 1.0em;
-  color: #333;
-  margin-bottom: 10px;
+  color: #3e0068;
+  margin-bottom: 0.5px;
+}
+
+.welcomeMessage {
+  text-align: center;
+  font-size: 1.0em;
+  color: #3e0068;
+  margin-bottom: 0.5px;
 }
 
 .App-link {

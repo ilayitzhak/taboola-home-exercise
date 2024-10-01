@@ -4,7 +4,7 @@
     box-shadow: 0 2px 8px rgba(172, 47, 47, 0.1);
     padding: 12px;
     margin: 12px auto;
-    background-color: #fff;
+    background-color: #f1e7f7;
     width: 90%;
     max-width: 350px;
     
@@ -17,20 +17,20 @@
 .cardTitle {
     font-size: 0.9em;
     text-decoration: underline; 
-    color: #834b72;
+    color: #4a0086;
     text-align: center;
     margin-bottom: 8px;
 }
 
 .urlTitle {
     font-size: 0.65em;
-    color: #d475b8;
+    color: #390869;
     word-wrap: break-word;
     margin-bottom: 6px;
 }
 
 a {
-    color: #d475b8;
+    color: #c79bf3;
     text-decoration: none;
 }
 
