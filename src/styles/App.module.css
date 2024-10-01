@@ -18,6 +18,13 @@
   color: white;
 }
 
+.instruction {
+  text-align: center;
+  font-size: 1.0em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
 .App-link {
   color: #61dafb;
 }

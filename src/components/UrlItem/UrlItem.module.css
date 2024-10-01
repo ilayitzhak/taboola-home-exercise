@@ -9,12 +9,12 @@
     max-width: 350px;
     
 }
-.card-content {
+.cardContent {
     display: flex;
     flex-direction: column;
 }
 
-h1 {
+.cardTitle {
     font-size: 0.9em;
     text-decoration: underline; 
     color: #834b72;
@@ -22,7 +22,7 @@ h1 {
     margin-bottom: 8px;
 }
 
-.url-title {
+.urlTitle {
     font-size: 0.65em;
     color: #d475b8;
     word-wrap: break-word;

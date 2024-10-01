@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+// import './App.css';
 import { fetchRetrievedUrlItems, fetchEnrichmentData } from './services/fetchData';
 import { processRetrievedUrlItems, processEnrichmentData } from './utils/processData';
 import { enrichUrlData } from './utils/enrichUrlData';
 import CountryGroup from './components/CountryGroup/CountryGroup.js';
+import styles from './styles/App.module.css';
 
 function App() {
   const [groupedUrls, setGroupedUrls] = useState({});
+  const [selectedCountry, setSelectedCountry] = useState('All Countries');
 
   useEffect(() => {
     const getEnrichedUrls = async () => {
@@ -36,11 +38,29 @@ function App() {
     getEnrichedUrls();
   }, []);
 
+  const handleCountryChange = (event) => {
+    setSelectedCountry(event.target.value);
+  };
+
+  const countries = ['All Countries', ...Object.keys(groupedUrls)].sort();
+
   return (
-    <div className="App">
-      {Object.entries(groupedUrls).map(([country, enrichedUrl]) => (
-        <CountryGroup key={country} country={country} enrichedUrl={enrichedUrl} />
-      ))}
+    <div className={styles.App}>
+      <h1 className={styles.instruction}>Hello! To See the Data Enrichment URLs for Each Country, Select the Desired Country</h1>
+      <nav>
+        <ul>
+            <select value={selectedCountry} onChange={handleCountryChange}>
+              {countries.map(country => (
+                <option key={country} value={country}>{country}</option>
+              ))}
+            </select>
+        </ul>
+      </nav>
+      {Object.entries(groupedUrls)
+        .filter(([country]) => selectedCountry === 'All Countries' || country === selectedCountry)
+        .map(([country, enrichedUrl]) => (
+          <CountryGroup key={country} country={country} enrichedUrl={enrichedUrl} />
+        ))}
     </div>
   );
 }

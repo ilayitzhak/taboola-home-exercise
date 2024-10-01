@@ -1,10 +1,11 @@
 import React from 'react';
-import UrlItem from '../UrlItem/UrlItem';
-import './CountryGroup.css';
+import UrlItem from '../UrlItem/UrlItem.js';
+import styles from './CountryGroup.module.css';
+
 const CountryGroup = ({ country, enrichedUrl }) => {
   return (
-    <div className="country-group">
-      <h2 className="country-title">{country}:</h2>
+    <div className={styles.countryGroup}>
+      <h2 className={styles.countryTitle}>{country}:</h2>
       {enrichedUrl.map((enrichedUrl, index) => (
         <UrlItem key={index} enrichedUrl={enrichedUrl} />
       ))}
@@ -13,4 +14,3 @@ const CountryGroup = ({ country, enrichedUrl }) => {
 };
 
 export default CountryGroup;
-
